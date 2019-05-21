@@ -1,15 +1,14 @@
 package co.com.citrino.citrino.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "ctxtemporada", schema = "dbcitrino")
 public class CtxTemporada {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
     @Column(name = "idtemporada")
     private Long idSeason;
 

@@ -1,15 +1,14 @@
 package co.com.citrino.citrino.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "ctxregulatorio", schema = "dbcitrino")
 public class CtxRegulatorio {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
     @Column(name = "idregulatorio")
     private Long idRegulatorio;
 

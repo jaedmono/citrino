@@ -8,6 +8,8 @@ import java.util.Date;
 public class Company {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
     @Column(name = "emp_emp")
     private Long idCompany;
 

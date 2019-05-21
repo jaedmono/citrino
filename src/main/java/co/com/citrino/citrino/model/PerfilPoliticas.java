@@ -1,9 +1,6 @@
 package co.com.citrino.citrino.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -11,6 +8,8 @@ import java.util.Date;
 public class PerfilPoliticas {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
     @Column(name = "ppol_ppol")
     private Long idPerfilPoliticas;
 
@@ -29,16 +28,16 @@ public class PerfilPoliticas {
     @Column(name = "ppol_tipodato")
     private String ppolTipoDato;
 
-    @Column(name = "ppol_tipoCadena")
+    @Column(name = "ppol_tipo_cadena")
     private String ppolTipoCadena;
 
-    @Column(name = "ppol_tipoEntero")
+    @Column(name = "ppol_tipo_entero")
     private Long ppolTipoEntero;
 
-    @Column(name = "ppol_tipoboolenano")
+    @Column(name = "ppol_tipo_boolenano")
     private Long ppolTipoBooleano;
 
-    @Column(name = "ppol_tipofecha")
+    @Column(name = "ppol_tipo_fecha")
     private Date ppolTipoFecha;
 
     public Long getIdPerfilPoliticas() {
