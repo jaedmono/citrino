@@ -28,16 +28,16 @@ public class PerfilPoliticas {
     @Column(name = "ppol_tipodato")
     private String ppolTipoDato;
 
-    @Column(name = "ppol_tipo_cadena")
+    @Column(name = "ppol_tipocadena")
     private String ppolTipoCadena;
 
-    @Column(name = "ppol_tipo_entero")
+    @Column(name = "ppol_tipoentero")
     private Long ppolTipoEntero;
 
-    @Column(name = "ppol_tipo_boolenano")
+    @Column(name = "ppol_tipoboolenano")
     private Long ppolTipoBooleano;
 
-    @Column(name = "ppol_tipo_fecha")
+    @Column(name = "ppol_tipofecha")
     private Date ppolTipoFecha;
 
     public Long getIdPerfilPoliticas() {
