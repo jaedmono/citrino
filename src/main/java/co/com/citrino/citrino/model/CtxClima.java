@@ -3,7 +3,7 @@ package co.com.citrino.citrino.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "industria", schema = "dbcitrino" )
+@Table(name = "ctxclima", schema = "dbcitrino" )
 public class CtxClima {
 
     @Id

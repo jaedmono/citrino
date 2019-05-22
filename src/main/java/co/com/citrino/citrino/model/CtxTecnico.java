@@ -4,7 +4,7 @@ package co.com.citrino.citrino.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "ctxsocial", schema = "dbcitrino")
+@Table(name = "ctxtecnico", schema = "dbcitrino")
 public class CtxTecnico {
 
     @Id

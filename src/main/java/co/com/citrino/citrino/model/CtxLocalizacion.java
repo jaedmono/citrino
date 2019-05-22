@@ -3,7 +3,7 @@ package co.com.citrino.citrino.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "industria", schema = "dbcitrino" )
+@Table(name = "ctxlocalizacion", schema = "dbcitrino" )
 public class CtxLocalizacion {
 
     @Id
@@ -19,7 +19,7 @@ public class CtxLocalizacion {
     private String city;
 
     @Column(name = "pais")
-    private String contry;
+    private String country;
 
     public Long getIdLocalizacion() {
         return idLocalizacion;
@@ -45,11 +45,11 @@ public class CtxLocalizacion {
         this.city = city;
     }
 
-    public String getContry() {
-        return contry;
+    public String getCountry() {
+        return country;
     }
 
-    public void setContry(String contry) {
-        this.contry = contry;
+    public void setCountry(String contry) {
+        this.country = contry;
     }
 }
