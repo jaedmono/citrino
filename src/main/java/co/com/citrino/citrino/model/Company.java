@@ -19,6 +19,9 @@ public class Company {
     @Column(name = "emp_nombre")
     private String nameCompany;
 
+    @Column(name = "emp_numemplado")
+    private Long totalEmployees;
+
     @Column(name = "emp_tipoempresa")
     private String companyType;
 
@@ -108,5 +111,13 @@ public class Company {
 
     public void setCreationDate(Date creationDate) {
         this.creationDate = creationDate;
+    }
+
+    public Long getTotalEmployees() {
+        return totalEmployees;
+    }
+
+    public void setTotalEmployees(Long totalEmployees) {
+        this.totalEmployees = totalEmployees;
     }
 }
