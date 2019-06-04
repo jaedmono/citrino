@@ -40,6 +40,11 @@ public class ProcessServiceImpl implements ProcessService {
     }
 
     @Override
+    public List findByIdIndustry(Long idIndustry) {
+        return repository.findByInd(idIndustry);
+    }
+
+    @Override
     public Process update(Process process) {
         return null;
     }

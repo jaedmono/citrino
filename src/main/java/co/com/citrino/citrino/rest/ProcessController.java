@@ -22,9 +22,9 @@ public class ProcessController {
         return service.create(process);
     }
 
-    @GetMapping(path = {"/{id}"})
-    public Process findOne(@PathVariable("id") Long id){
-        return service.findById(id);
+    @GetMapping(path = {"/{idIndustry}"})
+    public List findOne(@PathVariable("idIndustry") Long id){
+        return service.findByIdIndustry(id);
     }
 
     @PutMapping

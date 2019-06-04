@@ -14,7 +14,7 @@ public class Company {
     private Long idCompany;
 
     @Column(name = "emp_nit")
-    private Long nitCompany;
+    private String nitCompany;
 
     @Column(name = "emp_nombre")
     private String nameCompany;
@@ -46,11 +46,11 @@ public class Company {
         this.idCompany = idCompany;
     }
 
-    public Long getNitCompany() {
+    public String getNitCompany() {
         return nitCompany;
     }
 
-    public void setNitCompany(Long nitCompany) {
+    public void setNitCompany(String nitCompany) {
         this.nitCompany = nitCompany;
     }
 

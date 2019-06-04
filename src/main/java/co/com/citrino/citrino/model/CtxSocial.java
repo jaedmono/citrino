@@ -19,7 +19,7 @@ public class CtxSocial {
     private String implicacion;
 
     @Column(name = "valor")
-    private Long valor;
+    private String valor;
 
     @Column(name = "emp_emp")
     private Long idCompany;
@@ -48,11 +48,11 @@ public class CtxSocial {
         this.implicacion = implicacion;
     }
 
-    public Long getValor() {
+    public String getValor() {
         return valor;
     }
 
-    public void setValor(Long valor) {
+    public void setValor(String valor) {
         this.valor = valor;
     }
 

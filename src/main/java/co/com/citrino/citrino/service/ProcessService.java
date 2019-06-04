@@ -11,6 +11,8 @@ public interface ProcessService {
 
     List findAll() ;
 
+    List findByIdIndustry(Long idIndustry);
+
     Process findById(Long id) ;
 
     Process update(Process process) ;
