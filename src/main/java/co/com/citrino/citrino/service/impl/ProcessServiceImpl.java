@@ -1,5 +1,6 @@
 package co.com.citrino.citrino.service.impl;
 
+import co.com.citrino.citrino.dto.ProcesoResponse;
 import co.com.citrino.citrino.model.Process;
 import co.com.citrino.citrino.respository.ProcessRepository;
 import co.com.citrino.citrino.service.ProcessService;
@@ -19,6 +20,24 @@ public class ProcessServiceImpl implements ProcessService {
     @Override
     public Process create(Process process) {
         return repository.save(process);
+    }
+
+    @Override
+    public ProcesoResponse create(List<Process> processes) {
+        ProcesoResponse response = new ProcesoResponse();
+        long countSucess = 0;
+        long countErrors = 0;
+        for(Process process: processes){
+            try {
+                repository.save(process);
+                countSucess ++;
+            }catch (Exception e){
+                countErrors ++;
+            }
+        }
+        response.setRecordsError(countErrors);
+        response.setRecordsSucess(countSucess);
+        return response;
     }
 
     @Override

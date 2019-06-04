@@ -1,5 +1,6 @@
 package co.com.citrino.citrino.rest;
 
+import co.com.citrino.citrino.dto.ProcesoResponse;
 import co.com.citrino.citrino.model.Process;
 import co.com.citrino.citrino.service.ProcessService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +18,13 @@ public class ProcessController {
     @Autowired
     private ProcessService service;
 
-    @PostMapping
+    /*@PostMapping
     public Process create(@RequestBody Process process){
+        return service.create(process);
+    }*/
+
+    @PostMapping
+    public ProcesoResponse create(@RequestBody List<Process> process){
         return service.create(process);
     }
 
